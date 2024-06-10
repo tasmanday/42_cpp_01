@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tday <tday@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/08 17:11:22 by tday              #+#    #+#             */
-/*   Updated: 2024/06/08 17:25:03 by tday             ###   ########.fr       */
+/*   Created: 2024/06/10 14:34:57 by tday              #+#    #+#             */
+/*   Updated: 2024/06/10 14:54:07 by tday             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 /*
-	Constructor to initialize the zombie class and set Zombie.name to the value
-	of the 'name' variable
-*/
-Zombie::Zombie(std::string name)
-{
-	this->name = name;
-}
+	Creates a new zombie on the heap, names it, and returns a pointer to it.
 
-/*
-	Destructor that announces when a zombie is destroyed
+	'new' is similar to malloc, it allocates dynamic memory on the heap that 
+	would then need to be freed with 'delete'.
 */
-Zombie::~Zombie()
+Zombie* newZombie(std::string name)
 {
-    std::cout << name << " is destroyed" << std::endl;
-}
-
-/*
-	Function for the zombie to announce itself
-*/
-void Zombie::announce(void)
-{
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    return new Zombie(name);
 }

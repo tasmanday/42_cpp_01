@@ -6,13 +6,13 @@
 #    By: tday <tday@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/10 15:31:37 by tday              #+#    #+#              #
-#    Updated: 2024/06/10 15:42:48 by tday             ###   ########.fr        #
+#    Updated: 2024/06/10 17:31:36 by tday             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Variables
 NAME            = zombie
-CXX             = g++
+CXX             = c++
 CXXFLAGS        = -Wall -Wextra -Werror -std=c++98
 SRC_DIR         = sources
 INC_DIR         = includes
